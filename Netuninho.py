@@ -14,3 +14,4 @@ async def on_ready():
   print(f"{bot.user.name} running!")
   # loading commands
   netuno.events.__init__(bot)
+  netuno.commands.chat.__init__(bot)
