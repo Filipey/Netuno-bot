@@ -9,7 +9,7 @@ intents = discord.Intents.all()
 intents.members = True
 intents.typing = False
 
-bot = c.Bot(intents = intents, command_prefix="$", help_command=None)
+bot = c.Bot(intents = intents, command_prefix=netuno.config.bot_prefix(), help_command=None)
 
 @bot.event
 async def on_ready():
