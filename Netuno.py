@@ -13,7 +13,7 @@ TOKEN = os.getenv('TOKEN')
 
 intents = discord.Intents.all()
 intents.members = True
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='-')
 
 youtube_dl.utils.bug_reports_message = lambda: ''
 
