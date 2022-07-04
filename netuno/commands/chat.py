@@ -1,7 +1,5 @@
 from random import choice
 
-import discord
-
 
 def __init__(bot):
   leitao(bot)
@@ -32,5 +30,5 @@ def leitao(bot):
 
 def delete_message(bot):
   @bot.command()
-  async def delete_messege(ctx, number_of_messages: int):
+  async def delete(ctx, number_of_messages: int):
     await ctx.channel.purge(limit=number_of_messages+1)

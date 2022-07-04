@@ -1,1 +1,2 @@
-"TODO"
+def todo():
+  print("TODO")
