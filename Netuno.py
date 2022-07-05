@@ -9,7 +9,7 @@ intents = discord.Intents.all()
 intents.members = True
 intents.typing = False
 
-bot = c.Bot(intents = intents, command_prefix=netuno.config.bot_prefix(), help_command=None)
+bot = c.Bot(intents = intents, command_prefix=netuno.config.bot_prefix())
 
 @bot.event
 async def on_ready():
@@ -17,5 +17,6 @@ async def on_ready():
   # loading commands
   netuno.events.__init__(bot)
   netuno.commands.chat.__init__(bot)
+  await netuno.events.change_status(bot)
 
 bot.run(netuno.config.bot_token())
