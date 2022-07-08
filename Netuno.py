@@ -15,7 +15,9 @@ bot = c.Bot(intents = intents, command_prefix=netuno.config.bot_prefix())
 async def on_ready():
   print(f"{bot.user.name} running!")
   # loading commands
+  await netuno.events.node_connect(bot)
   netuno.events.__init__(bot)
+  netuno.commands.music.__init__(bot)
   netuno.commands.chat.__init__(bot)
   await netuno.events.change_status(bot)
 

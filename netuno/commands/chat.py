@@ -3,7 +3,7 @@ from random import choice
 import discord
 import netuno
 from discord.ext import commands as cmd
-from netuno.errors.standard import handle
+from netuno.errors.standard import handle_chat as handle
 
 
 def __init__(bot):
@@ -11,7 +11,7 @@ def __init__(bot):
   clear(bot)
   ban(bot)
   kick(bot)
-  helpc(bot)
+  dilema(bot)
 
 
 def leitao(bot):
@@ -75,8 +75,7 @@ def kick(bot):
   async def kick_error(ctx, error):
     await handle(ctx, error)
 
-def helpc(bot):
-  bot.remove_command('help')
+def dilema(bot):
   @bot.command()
-  async def help(ctx):
+  async def dilema(ctx):
     await ctx.send(embed=netuno.tools.embed.new_embed())
